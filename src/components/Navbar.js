@@ -6,16 +6,16 @@ import { usePathname } from 'next/navigation'
 export const Navbar = () => {
   const pathname = usePathname()
   return (
-    <nav className='flex justify-between items-center py-[52px] px-[100px]'>
+    <nav className='flex justify-between items-center py-[52px] px-[20px] lg:px-[100px]'>
       <Link href={'/'}>
-        <span className='text-[#FFFFFF] leading-[43.57px] text-[36px] font-[400]'>
+        <span className='text-[#FFFFFF] leading-[43.57px] text-[36px] max-xl:text-[25.2px] font-[400]'>
           Web3 <span className='text-[#F2A93B]'>Together</span>
         </span>
       </Link>
-      <ul className='flex items-center leading-[24.2px] text-[20px] font-[400] gap-[40px] text-white/50'>
+      <ul className='flex items-center leading-[24.2px] text-[20px] max-xl:text-[14px] font-[400] gap-[40px] text-white/50 max-lg:hidden'>
         <li>
           <Link href={'/membership'}
-            className={`${pathname === '/membership' && 'text-[#F2A93B] font-[700]'} `}
+            className={`${pathname === '/membership' && 'text-[#F2A93B] font-[700]'}`}
           >
             Membership
           </Link>
