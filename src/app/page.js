@@ -21,7 +21,7 @@ export default function Home() {
           </p>
           <div className="flex sm:items-center sm:gap-[50px] max-sm:gap-5 ">
             <Link href={'#'}>
-              <Button label='Explore Now' />
+              <Button label='Explore Now' className={'duration-100 hover:bg-[#F2A93B]/80'}/>
             </Link>
             <Link href={'#'}>
               <ButtonLearnMore />
