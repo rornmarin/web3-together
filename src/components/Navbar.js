@@ -16,38 +16,38 @@ export const Navbar = () => {
         </span>
       </Link>
 
-      <ul className='flex items-center leading-[24.2px] text-[20px] max-xl:text-[14px] font-[400] gap-[40px] text-white/50 max-md:hidden'>
+      <ul className='flex items-center leading-[24.2px] text-[20px] max-xl:text-[14px] gap-[40px] text-white/50 max-md:hidden font-[700]'>
         <li>
           <Link href={'/membership'}
-            className={`${pathname === '/membership' && 'text-[#F2A93B] font-[700]'}`}
+            className={`${pathname === '/membership' && 'text-[#F2A93B]'} hover:text-[#F2A93B] duration-100`}
           >
             Membership
           </Link>
         </li>
         <li>
           <Link href={'rewards'}
-            className={`${pathname === '/rewards' && 'text-[#F2A93B] font-[700]'}`}
+            className={`${pathname === '/rewards' && 'text-[#F2A93B]'} hover:text-[#F2A93B] duration-100`}
           >
             Rewards
           </Link>
         </li>
         <li>
           <Link href={'community'}
-            className={`${pathname === '/community' && 'text-[#F2A93B] font-[700]'}`}
+            className={`${pathname === '/community' && 'text-[#F2A93B]'} hover:text-[#F2A93B] duration-100`}
           >
             Community
           </Link>
         </li>
         <li>
           <Link href={'faqs'}
-            className={`${pathname === '/faqs' && 'text-[#F2A93B] font-[700]'}`}
+            className={`${pathname === '/faqs' && 'text-[#F2A93B]'} hover:text-[#F2A93B] duration-100`}
           >
             FAQs
           </Link>
         </li>
         <li>
           <Link onClick={() => setToggleMenu(false)} href='mint'>
-            <Button label='Mint is live' className='!px-[27.5px] !py-[19px] text-white' />
+            <Button label='Mint is live' className='!px-[27.5px] !py-[19px] text-white hover:bg-[#F2A93B]/80 duration-100' />
           </Link>
         </li>
       </ul>
@@ -56,10 +56,10 @@ export const Navbar = () => {
         <input type='checkbox' checked={toggleMenu} onChange={() => setToggleMenu(!toggleMenu)} />
       </label>
       <aside className='sidebar fixed top-0 right-0 duration-300 backdrop-blur bg-white/5 max-md:w-full max-md:h-screen pt-[100px] overflow-auto z-50'>
-        <ul className='flex flex-col items-center px-[10px] leading-[24.2px] text-[20px] font-[400] gap-[40px] text-white/50 md:hidden sm:pb-[30px] sm:px-[30px]'>
+        <ul className='flex flex-col items-center px-[10px] leading-[24.2px] text-[20px] font-[700] gap-[40px] text-white/50 md:hidden sm:pb-[30px] sm:px-[30px]'>
           <li>
             <Link href={'/membership'}
-              className={`${pathname === '/membership' && 'text-[#F2A93B] font-[700]'}`}
+              className={`${pathname === '/membership' && 'text-[#F2A93B]'}`}
               onClick={() => setToggleMenu(false)}
             >
               Membership
@@ -67,7 +67,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'rewards'}
-              className={`${pathname === '/rewards' && 'text-[#F2A93B] font-[700]'}`}
+              className={`${pathname === '/rewards' && 'text-[#F2A93B]'}`}
               onClick={() => setToggleMenu(false)}
             >
               Rewards
@@ -75,7 +75,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'community'}
-              className={`${pathname === '/community' && 'text-[#F2A93B] font-[700]'}`}
+              className={`${pathname === '/community' && 'text-[#F2A93B]'}`}
               onClick={() => setToggleMenu(false)}
             >
               Community
@@ -83,7 +83,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'faqs'}
-              className={`${pathname === '/faqs' && 'text-[#F2A93B] font-[700]'}`}
+              className={`${pathname === '/faqs' && 'text-[#F2A93B]'}`}
               onClick={() => setToggleMenu(false)}
             >
               FAQs
