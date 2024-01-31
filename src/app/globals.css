@@ -4,8 +4,81 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root{
+    --bar-width: 40px;
+    --bar-height: 5px;
+    --hamburger-gap: 6px;
+    --foreground: white;
+    --background: #F2A93B;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2)
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Inter', sans-serif !important;
     background-color: #19173D;
     color: white;
+}
+
+.hamburger-menu{
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    z-index: 999;
+    cursor: pointer;
+}
+
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input{
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: right center;
+    transition: opacity var(--animation-timing), width var(--animation-timing);
+}
+
+.hamburger-menu input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before{
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+.hamburger-menu:has(input:checked)::after{
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked{
+    opacity: 0;
+    width: 0;
+}
+
+.sidebar{
+    transition: translate var(--animation-timing), opacity var(--animation-timing);
+    translate: 100%;
+    opacity: 0;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar{
+    translate: 0;
+    opacity: 1;
 }
