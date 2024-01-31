@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body suppressHydrationWarning={true}
-        className={inter.className}>
+        className={`${inter.className} overflow-x-hidden`}>
           <Navbar />
           {children}
       </body>
