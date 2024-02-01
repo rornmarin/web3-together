@@ -1,17 +1,35 @@
+import { Card } from '@/components/membership/Card'
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
   return (
-    <div className='px-[20px] lg:px-[100px] pb-[36px] !overflow-x-clip'>
-      <div>
-        <h1 className="font-bold text-[40px] leading-[50px] tracking-[5%] mb-[20px]">
+    <div className='pt-10'>
+      <div className='pb-5'>
+        <h1 className="font-bold text-lg md:text-2xl lg:text-3xl xl:text-4xl pb-5">
           How to be a Membership?
         </h1>
-        <p className="font-normal text-[24px] leading-[30px] tracking-[1.2px] mb-[30px]">
-          When you buy a 
-          <span className='font-[700]'> Web3 Together NFT Membership Pass, </span> 
-          you’re not simply buying an NFT. You will gain membership access to a Web3 Together Membership Pass: Genesis Edition whose benefits and offerings will increase over time.<span></span>Web3 Together pass supply will be limited to 3333.
+        <p className="font-normal lg:text-2xl pb-5">
+          When you buy a
+          <span className='font-bold'> Web3 Together NFT Membership Pass, </span>
+          you’re not simply buying an NFT. You will gain membership access to a Web3 Together Membership Pass: Genesis Edition whose benefits and offerings will increase over time.<span className='font-bold'> Web3 Together pass supply</span> will be limited to 3333.
         </p>
+        <p>Link here:
+          <Link href={'#'} className='underline underline-offset-2 font-normal lg:text-2xl'>
+            https://www.google.com/
+          </Link>
+        </p>
+      </div>
+      <div className='grid md:grid-cols-2 place-items-center'>
+        <Card />
+        <div className='w-full flex md:justify-end max-md:pt-5'>
+          <Link href={'#'} className='md:w-4/5'>
+            <Image
+              className=''
+              src={require('@/resources/membership/etoro.png')} alt='etoro' />
+          </Link>
+        </div>
       </div>
     </div>
   )
