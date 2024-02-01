@@ -9,7 +9,7 @@ export const Navbar = () => {
   const pathname = usePathname()
   const [toggleMenu, setToggleMenu] = useState(false)
   return (
-    <nav className='flex justify-between items-center py-[20px] px-[20px] lg:px-[100px]'>
+    <nav className='flex justify-between items-center'>
       <Link href={'/'}>
         <span className='text-[#FFFFFF] leading-[43.57px] text-[36px] max-xl:text-[25.2px] font-[400]'>
           <Image priority width={100} src={require('../resources/logo/web3_together_logo_white_text.png')} alt='logo' />
