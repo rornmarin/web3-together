@@ -10,13 +10,13 @@ export const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
   return (
     <nav className='flex justify-between items-center'>
-      <Link href={'/'}>
-        <span className='text-[#FFFFFF] leading-[43.57px] text-[36px] max-xl:text-[25.2px] font-[400]'>
-          <Image priority width={100} src={require('../resources/logo/web3_together_logo_white_text.png')} alt='logo' />
+      <Link href={'/'} className='-ml-5'>
+        <span >
+          <Image priority width={100} height={100} src={require('../resources/logo/web3_together_logo_white_text.png')} alt='logo' />
         </span>
       </Link>
 
-      <ul className='flex items-center leading-[24.2px] text-[20px] max-xl:text-[14px] gap-[40px] text-white/50 max-md:hidden font-[700]'>
+      <ul className='flex items-center lg:text-xl gap-5 lg:gap-10 text-white/50 max-md:hidden font-bold'>
         <li>
           <Link href={'/membership'}
             className={`${pathname === '/membership' && 'text-[#F2A93B]'} hover:text-[#F2A93B] duration-100`}
@@ -47,16 +47,16 @@ export const Navbar = () => {
         </li>
         <li>
           <Link onClick={() => setToggleMenu(false)} href='mint'>
-            <Button label='Mint is live' className='!px-[27.5px] !py-[19px] text-white hover:bg-[#F2A93B]/80 duration-100' />
+            <Button label='Mint is live' className='lg:!px-7 lg:!py-5 text-white hover:bg-[#F2A93B]/80 duration-100' />
           </Link>
         </li>
       </ul>
 
-      <label className={`hamburger-menu md:hidden ${toggleMenu && 'fixed right-[20px]'}`}>
+      <label className={`hamburger-menu md:hidden ${toggleMenu && 'fixed right-5'}`}>
         <input type='checkbox' checked={toggleMenu} onChange={() => setToggleMenu(!toggleMenu)} />
       </label>
-      <aside className='sidebar fixed top-0 right-0 duration-300 backdrop-blur bg-white/5 max-md:w-full max-md:h-screen pt-[100px] overflow-auto z-50'>
-        <ul className='flex flex-col items-center px-[10px] leading-[24.2px] text-[20px] font-[700] gap-[40px] text-white/50 md:hidden sm:pb-[30px] sm:px-[30px]'>
+      <aside className='sidebar fixed top-0 right-0 duration-300 backdrop-blur bg-white/5 max-md:w-full h-screen overflow-auto z-50 pt-24 pb-10'>
+        <ul className='flex flex-col items-center text-xl font-bold gap-10 text-white/50 md:hidden '>
           <li>
             <Link href={'/membership'}
               className={`${pathname === '/membership' && 'text-[#F2A93B]'}`}
@@ -91,7 +91,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link onClick={() => setToggleMenu(false)} href='mint'>
-              <Button label='Mint is live' className='!px-[27.5px] !py-[19px] text-white' />
+              <Button label='Mint is live' className='px-7 py-5 text-white' />
             </Link>
           </li>
         </ul>
