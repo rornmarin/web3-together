@@ -2,6 +2,7 @@ import { Card } from '@/components/membership/Card'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import etoro from '@/resources/membership/etoro.png'
 
 const page = () => {
   return (
@@ -26,8 +27,7 @@ const page = () => {
         <div className='w-full flex md:justify-end max-md:pt-5'>
           <Link href={'#'} className='md:w-4/5'>
             <Image
-              className=''
-              src={require('@/resources/membership/etoro.png')} alt='etoro' />
+              src={etoro} alt='etoro' />
           </Link>
         </div>
       </div>
