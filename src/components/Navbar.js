@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { Button } from './Button'
+import clsx from 'clsx';
 
 export const Navbar = () => {
   const pathname = usePathname()
@@ -19,28 +20,28 @@ export const Navbar = () => {
       <ul className='flex items-center lg:text-xl gap-5 lg:gap-10 text-white/50 max-md:hidden font-bold'>
         <li>
           <Link href={'/membership'}
-            className={`${pathname === '/membership' && 'text-[#F2A93B]'} hover:text-[#F2A93B] duration-100`}
+            className={clsx(pathname === '/membership' && 'text-[#F2A93B]', 'hover:text-[#F2A93B] duration-100')}
           >
             Membership
           </Link>
         </li>
         <li>
           <Link href={'rewards'}
-            className={`${pathname === '/rewards' && 'text-[#F2A93B]'} hover:text-[#F2A93B] duration-100`}
+            className={clsx(pathname === '/rewards' && 'text-[#F2A93B]', 'hover:text-[#F2A93B] duration-100')}
           >
             Rewards
           </Link>
         </li>
         <li>
           <Link href={'community'}
-            className={`${pathname === '/community' && 'text-[#F2A93B]'} hover:text-[#F2A93B] duration-100`}
+            className={clsx(pathname === '/community' && 'text-[#F2A93B]', 'hover:text-[#F2A93B] duration-100')}
           >
             Community
           </Link>
         </li>
         <li>
           <Link href={'faqs'}
-            className={`${pathname === '/faqs' && 'text-[#F2A93B]'} hover:text-[#F2A93B] duration-100`}
+            className={clsx(pathname === '/faqs' && 'text-[#F2A93B]', 'hover:text-[#F2A93B] duration-100')}
           >
             FAQs
           </Link>
@@ -52,14 +53,14 @@ export const Navbar = () => {
         </li>
       </ul>
 
-      <label className={`hamburger-menu md:hidden ${toggleMenu && 'fixed right-5'}`}>
+      <label className={clsx('hamburger-menu md:hidden', toggleMenu && 'fixed right-5')}>
         <input type='checkbox' checked={toggleMenu} onChange={() => setToggleMenu(!toggleMenu)} />
       </label>
       <aside className='sidebar fixed top-0 right-0 duration-300 backdrop-blur bg-white/5 max-md:w-full h-screen overflow-auto z-50 pt-24 pb-10'>
         <ul className='flex flex-col items-center text-xl font-bold gap-10 text-white/50 md:hidden '>
           <li>
             <Link href={'/membership'}
-              className={`${pathname === '/membership' && 'text-[#F2A93B]'}`}
+              className={clsx(pathname === '/membership' && 'text-[#F2A93B]')}
               onClick={() => setToggleMenu(false)}
             >
               Membership
@@ -67,7 +68,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'rewards'}
-              className={`${pathname === '/rewards' && 'text-[#F2A93B]'}`}
+              className={clsx(pathname === '/rewards' && 'text-[#F2A93B]')}
               onClick={() => setToggleMenu(false)}
             >
               Rewards
@@ -75,7 +76,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'community'}
-              className={`${pathname === '/community' && 'text-[#F2A93B]'}`}
+              className={clsx(pathname === '/community' && 'text-[#F2A93B]')}
               onClick={() => setToggleMenu(false)}
             >
               Community
@@ -83,7 +84,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'faqs'}
-              className={`${pathname === '/faqs' && 'text-[#F2A93B]'}`}
+              className={clsx(pathname === '/faqs' && 'text-[#F2A93B]')}
               onClick={() => setToggleMenu(false)}
             >
               FAQs
