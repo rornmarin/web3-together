@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { Button } from './Button'
 import clsx from 'clsx';
+import logo from '@/resources/logo/web3_together_logo_white_text.png'
 
 export const Navbar = () => {
   const pathname = usePathname()
@@ -13,42 +14,42 @@ export const Navbar = () => {
     <nav className='flex justify-between items-center'>
       <Link href={'/'} className='-ml-5'>
         <span >
-          <Image priority width={100} height={100} src={require('../resources/logo/web3_together_logo_white_text.png')} alt='logo' />
+          <Image priority width={100} height={100} src={logo} alt='logo' />
         </span>
       </Link>
 
       <ul className='flex items-center lg:text-xl gap-5 lg:gap-10 text-white/50 max-md:hidden font-bold'>
         <li>
           <Link href={'/membership'}
-            className={clsx(pathname === '/membership' && 'text-[#F2A93B]', 'hover:text-[#F2A93B] duration-100')}
+            className={clsx(pathname === '/membership' && 'text-custom-yellow', 'hover:text-custom-yellow duration-100')}
           >
             Membership
           </Link>
         </li>
         <li>
           <Link href={'rewards'}
-            className={clsx(pathname === '/rewards' && 'text-[#F2A93B]', 'hover:text-[#F2A93B] duration-100')}
+            className={clsx(pathname === '/rewards' && 'text-custom-yellow', 'hover:text-custom-yellow duration-100')}
           >
             Rewards
           </Link>
         </li>
         <li>
           <Link href={'community'}
-            className={clsx(pathname === '/community' && 'text-[#F2A93B]', 'hover:text-[#F2A93B] duration-100')}
+            className={clsx(pathname === '/community' && 'text-custom-yellow', 'hover:text-custom-yellow duration-100')}
           >
             Community
           </Link>
         </li>
         <li>
           <Link href={'faqs'}
-            className={clsx(pathname === '/faqs' && 'text-[#F2A93B]', 'hover:text-[#F2A93B] duration-100')}
+            className={clsx(pathname === '/faqs' && 'text-custom-yellow', 'hover:text-custom-yellow duration-100')}
           >
             FAQs
           </Link>
         </li>
         <li>
           <Link onClick={() => setToggleMenu(false)} href='mint'>
-            <Button label='Mint is live' className='lg:!px-7 lg:!py-5 text-white hover:bg-[#F2A93B]/80 duration-100' />
+            <Button label='Mint is live' className='lg:!px-7 lg:!py-5 text-white hover:bg-custom-yellow/80 duration-100' />
           </Link>
         </li>
       </ul>
@@ -60,7 +61,7 @@ export const Navbar = () => {
         <ul className='flex flex-col items-center text-xl font-bold gap-10 text-white/50 md:hidden '>
           <li>
             <Link href={'/membership'}
-              className={clsx(pathname === '/membership' && 'text-[#F2A93B]')}
+              className={clsx(pathname === '/membership' && 'text-custom-yellow')}
               onClick={() => setToggleMenu(false)}
             >
               Membership
@@ -68,7 +69,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'rewards'}
-              className={clsx(pathname === '/rewards' && 'text-[#F2A93B]')}
+              className={clsx(pathname === '/rewards' && 'text-custom-yellow')}
               onClick={() => setToggleMenu(false)}
             >
               Rewards
@@ -76,7 +77,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'community'}
-              className={clsx(pathname === '/community' && 'text-[#F2A93B]')}
+              className={clsx(pathname === '/community' && 'text-custom-yellow')}
               onClick={() => setToggleMenu(false)}
             >
               Community
@@ -84,7 +85,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'faqs'}
-              className={clsx(pathname === '/faqs' && 'text-[#F2A93B]')}
+              className={clsx(pathname === '/faqs' && 'text-custom-yellow')}
               onClick={() => setToggleMenu(false)}
             >
               FAQs
