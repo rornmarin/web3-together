@@ -21,28 +21,28 @@ export const Navbar = () => {
       <ul className='flex items-center lg:text-xl gap-5 lg:gap-10 text-white/50 max-md:hidden font-bold'>
         <li>
           <Link href={'/membership'}
-            className={clsx(pathname === '/membership' && 'text-custom-yellow', 'hover:text-custom-yellow duration-100')}
+            className={clsx({'text-custom-yellow':pathname === '/membership'}, 'hover:text-custom-yellow duration-100')}
           >
             Membership
           </Link>
         </li>
         <li>
           <Link href={'rewards'}
-            className={clsx(pathname === '/rewards' && 'text-custom-yellow', 'hover:text-custom-yellow duration-100')}
+            className={clsx({'text-custom-yellow':pathname === '/rewards'}, 'hover:text-custom-yellow duration-100')}
           >
             Rewards
           </Link>
         </li>
         <li>
           <Link href={'community'}
-            className={clsx(pathname === '/community' && 'text-custom-yellow', 'hover:text-custom-yellow duration-100')}
+            className={clsx({'text-custom-yellow':pathname === '/community'}, 'hover:text-custom-yellow duration-100')}
           >
             Community
           </Link>
         </li>
         <li>
           <Link href={'faqs'}
-            className={clsx(pathname === '/faqs' && 'text-custom-yellow', 'hover:text-custom-yellow duration-100')}
+            className={clsx({'text-custom-yellow':pathname === '/faqs'}, 'hover:text-custom-yellow duration-100')}
           >
             FAQs
           </Link>
@@ -61,7 +61,7 @@ export const Navbar = () => {
         <ul className='flex flex-col items-center text-xl font-bold gap-10 text-white/50 md:hidden '>
           <li>
             <Link href={'/membership'}
-              className={clsx(pathname === '/membership' && 'text-custom-yellow')}
+              className={clsx({'text-custom-yellow':pathname === '/membership'})}
               onClick={() => setToggleMenu(false)}
             >
               Membership
@@ -69,7 +69,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'rewards'}
-              className={clsx(pathname === '/rewards' && 'text-custom-yellow')}
+              className={clsx({'text-custom-yellow':pathname === '/rewards'})}
               onClick={() => setToggleMenu(false)}
             >
               Rewards
@@ -77,7 +77,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'community'}
-              className={clsx(pathname === '/community' && 'text-custom-yellow')}
+              className={clsx({'text-custom-yellow':pathname === '/community'})}
               onClick={() => setToggleMenu(false)}
             >
               Community
@@ -85,7 +85,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link href={'faqs'}
-              className={clsx(pathname === '/faqs' && 'text-custom-yellow')}
+              className={clsx({'text-custom-yellow':pathname === '/faqs'})}
               onClick={() => setToggleMenu(false)}
             >
               FAQs
