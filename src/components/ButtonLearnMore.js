@@ -4,11 +4,10 @@ import { IoIosArrowForward } from "react-icons/io";
 export const ButtonLearnMore = ({onClick, className}) => {
     return (
         <button onClick={onClick}
-            className={`${className} text-[20px] font-normal leading-[24.2px] rounded-[7px] py-[10.5px] px-[18.5px] ring-[2px] ring-white/50 flex items-center relative overflow-clip pr-[63px] hover:text-[#F2A93B] duration-100 hover:ring-[#F2A93B]`}
+            className={`${className} text-xl whitespace-nowrap font-normal rounded-lg py-3 px-5 ring-1 ring-white/50 flex items-center relative overflow-clip pr-16 hover:text-custom-yellow duration-100 hover:ring-custom-yellow`}
         >
             Learn More
-            <IoIosArrowForward className='absolute bg-white/20 right-0 h-full w-[49px] flex justify-center items-center'/>
+            <IoIosArrowForward className='absolute bg-white/20 right-0 h-full w-12 flex justify-center items-center'/>
         </button>
     )
 }
-
