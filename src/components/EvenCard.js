@@ -1,6 +1,9 @@
+import { data } from "autoprefixer";
 import React from "react";
 
-export const EventCard = ({ cardimg, title, discription }) => {
+export const EventCard = ({ data }) => {
+  const { cardimg, title, description, onClick } = data;
+
   return (
     <div className="flex h-[285px] w-[610px] bg-[#D9D9D91A] rounded-lg justify-between">
       <div>
@@ -17,9 +20,12 @@ export const EventCard = ({ cardimg, title, discription }) => {
           {title}
         </h1>
         <p className="font-inter font-normal text-base leading-7 tracking-wider ">
-          {discription}
+          {description}
         </p>
-        <button className="w-[116px] h-[42px] bg-[#F2A93B] rounded-lg ml-[210px] mt-[33px] ">
+        <button
+          onClick={onClick}
+          className="w-[116px] h-[42px] bg-[#F2A93B] rounded-lg ml-[210px] mt-[33px] "
+        >
           Joint
         </button>
       </div>
