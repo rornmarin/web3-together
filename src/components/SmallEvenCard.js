@@ -1,19 +1,34 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export const SmallEvenCard = ({ data }) => {
-  const { img, title, description, date, joinLink } = data;
+  const searchParams = useSearchParams();
+
+  const router = useRouter();
+
+  const imageUrl = searchParams.get("img");
+
+  const { img, title, description, date, joinLink, query } = data;
 
   return (
     <div className="bg-white bg-opacity-10 rounded-lg">
       <div className="grid gap-5 ">
-        <img
-          className="rounded-lg object-cover h-72  w-full "
-          src={img}
-          alt="Event Image"
-        />
-
+        {imageUrl ? (
+          <img
+            className="rounded-lg object-cover h-72  w-full "
+            src={imageUrl}
+            alt="Event Image"
+          />
+        ) : (
+          <img
+            className="rounded-lg object-cover h-72  w-full "
+            src={img}
+            alt="Event Image"
+          />
+        )}
         <div className=" top-20 mx-5">
           <h1 className="font-inter font-bold text-xl mb-2 tracking-widest">
             {title}
@@ -26,7 +41,10 @@ export const SmallEvenCard = ({ data }) => {
               {date}
             </h1>
             <Link
-              href={joinLink}
+              href={{
+                pathname: joinLink,
+                query: query,
+              }}
               className="text-[#F2A93B] font-inter font-bold text-base leading-7 tracking-wider"
             >
               Join Now

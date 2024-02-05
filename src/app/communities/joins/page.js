@@ -1,22 +1,29 @@
 "use client";
 import React from "react";
 import { SmallEvenCard } from "@/components/SmallEvenCard";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
-const JoinEvent = () => {
+export default function JoinEvent() {
+  const searchParams = useSearchParams();
+
+  const imageUrl = searchParams.get("img");
+
+  const paragraphs = searchParams.get("paragraphs");
+
   const router = useRouter();
+
   const handleClickBack = () => {
-    router.push("/community");
+    router.push("/communities");
   };
 
   const eventData = [
     {
-      img: "https://s3-alpha-sig.figma.com/img/1bc5/cc4c/c0847ed3e7424e2c02351b7eef36211d?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=e4PdcvReLaP5i0QLiSb8s8Dztngsvqi~6yCgs2s5wWaEiCsm-wTT36PjtrPN8RQTZkXt~09OLH0gRRDakM3a9CRWs8ZL~OP3Yf17pI3F0oWltqLDzB~EBkzbkZIt6l4rwuvgP5wiCt983aSGerPPDDasBSG0yIXTRMvpdskubEQGwaRQ-wt3e58X~n-gqJUCIf65pBDBMDG3daY7KtydnMSF19D3zetWQjlJFs3d9yvwgC1pmpIe~ZaTkcROrGd6R7C5l6yoYZOvarE1y3PSLgHjIOGE1CpjXgFXA1Rz~F46kNzEfuIbO3pCN8YgU~laTUSP3dXG1JM4u1xuA0hFYQ__",
+      img: "https://s3-alpha-sig.figma.com/img/fc2d/6a75/f794b8542e7ff502cf17315379ee4031?Expires=1708300800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=I9knrVOBFRfsv~toBuYOndEwhLJjIES8eI6c7t8U4VQJsWPccSCLqYvC55cS4acuFfKIkiafG80v1IXFdUqKap9z1n78nCOV4CAHymkm7fPBb-pdDcly4oxjltyGxUY33D9F19ibTSxjiKAc5DGZ4f-WWmDjc1YhrNwjzGMciCPpcxNPVbwVezDWWtz3h-IvMEa4XHKg-a3dubdSS3nR6NXZU6--KdEFNiSLtS87eqONDU-TTGfNaML4qMea5S222OjUdl4jJgYiCFX3v2l54YNuARK4hR8CMzVwIVW4hG-XVmkMBIt4pUrOE3OwZMjp8n5J38WXP3TyOcUKX2oeIQ__",
       title: "TTN Event",
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "/community/join",
+      joinLink: "",
     },
     {
       img: "https://s3-alpha-sig.figma.com/img/1bc5/cc4c/c0847ed3e7424e2c02351b7eef36211d?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=e4PdcvReLaP5i0QLiSb8s8Dztngsvqi~6yCgs2s5wWaEiCsm-wTT36PjtrPN8RQTZkXt~09OLH0gRRDakM3a9CRWs8ZL~OP3Yf17pI3F0oWltqLDzB~EBkzbkZIt6l4rwuvgP5wiCt983aSGerPPDDasBSG0yIXTRMvpdskubEQGwaRQ-wt3e58X~n-gqJUCIf65pBDBMDG3daY7KtydnMSF19D3zetWQjlJFs3d9yvwgC1pmpIe~ZaTkcROrGd6R7C5l6yoYZOvarE1y3PSLgHjIOGE1CpjXgFXA1Rz~F46kNzEfuIbO3pCN8YgU~laTUSP3dXG1JM4u1xuA0hFYQ__",
@@ -24,7 +31,7 @@ const JoinEvent = () => {
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "/community/join",
+      joinLink: "",
     },
   ];
 
@@ -32,7 +39,7 @@ const JoinEvent = () => {
     <div className="w-full flex justify-center">
       <div className="w-full ">
         <div className="flex flex-col md:flex-row items-center justify-center mx-auto mb-10 md:mb-10">
-          <div className="mx-auto text-center mb-4 md:mb-0">
+          <div className="mx-auto text-center mb-5 md:mb-0">
             <h1 className="font-inter font-bold text-base md:text-xl lg:text-xl tracking-widest">
               If you hold 1 Web3 Together Membership <br />
               Pass = 1 Free NFT in Each NFT Project
@@ -49,12 +56,20 @@ const JoinEvent = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className=" mb-8 items-center justify-center ">
-            <img
-              className=" rounded-lg mb-10 w-full"
-              src="https://s3-alpha-sig.figma.com/img/1bc5/cc4c/c0847ed3e7424e2c02351b7eef36211d?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=e4PdcvReLaP5i0QLiSb8s8Dztngsvqi~6yCgs2s5wWaEiCsm-wTT36PjtrPN8RQTZkXt~09OLH0gRRDakM3a9CRWs8ZL~OP3Yf17pI3F0oWltqLDzB~EBkzbkZIt6l4rwuvgP5wiCt983aSGerPPDDasBSG0yIXTRMvpdskubEQGwaRQ-wt3e58X~n-gqJUCIf65pBDBMDG3daY7KtydnMSF19D3zetWQjlJFs3d9yvwgC1pmpIe~ZaTkcROrGd6R7C5l6yoYZOvarE1y3PSLgHjIOGE1CpjXgFXA1Rz~F46kNzEfuIbO3pCN8YgU~laTUSP3dXG1JM4u1xuA0hFYQ__"
-              alt="Event Image"
-            />
+          <div className="items-center justify-center ">
+            {imageUrl ? (
+              <img
+                className="mb-10 rounded-lg w-full"
+                src={imageUrl}
+                alt="Event Image"
+              />
+            ) : (
+              <img
+                className="mb-10 rounded-lg w-full"
+                src="https://s3-alpha-sig.figma.com/img/1bc5/cc4c/c0847ed3e7424e2c02351b7eef36211d?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=e4PdcvReLaP5i0QLiSb8s8Dztngsvqi~6yCgs2s5wWaEiCsm-wTT36PjtrPN8RQTZkXt~09OLH0gRRDakM3a9CRWs8ZL~OP3Yf17pI3F0oWltqLDzB~EBkzbkZIt6l4rwuvgP5wiCt983aSGerPPDDasBSG0yIXTRMvpdskubEQGwaRQ-wt3e58X~n-gqJUCIf65pBDBMDG3daY7KtydnMSF19D3zetWQjlJFs3d9yvwgC1pmpIe~ZaTkcROrGd6R7C5l6yoYZOvarE1y3PSLgHjIOGE1CpjXgFXA1Rz~F46kNzEfuIbO3pCN8YgU~laTUSP3dXG1JM4u1xuA0hFYQ__"
+                alt="Event Image"
+              />
+            )}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {eventData.map((data, index) => (
                 <div className="w-full" key={index}>
@@ -79,7 +94,7 @@ const JoinEvent = () => {
               ever since the 1500s,
             </h1>
             <h1 className="mt-5 font-inter font-bold text-xl md:text-2xl leading-snug tracking-widest">
-              Timeline
+              Timeline:
             </h1>
             <h1 className="w-full md:w-4/5 font-sans text-base text-white tracking-wider leading-loose">
               <ul className="list-disc pl-4">
@@ -103,16 +118,11 @@ const JoinEvent = () => {
               <span className="font-inter font-bold text-xl md:text-2xl leading-[40px] tracking-widest">
                 Noted:
               </span>
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took
+              {paragraphs}
             </h1>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default JoinEvent;
-
+}
