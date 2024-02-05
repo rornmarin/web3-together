@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="mt-5 lg:mt-10">
       <div className="relative flex justify-between gap-5 max-lg:grid-cols-1">
-        <section className="lg:w-4/6">
+        <section className="lg:w-3/6">
           <h1 className="font-bold text-lg md:text-2xl lg:text-3xl xl:text-4xl mb-5 duration-200">
             We are a small<br className="max-xl:hidden" />
             community that helps<br className="max-xl:hidden" />
