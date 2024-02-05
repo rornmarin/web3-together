@@ -2,10 +2,10 @@ import React from 'react'
 
 export const Card = () => {
   return (
-    <div className='rounded-[20px] relative lg:w-[679px] max-lg:max-w-full sm:h-[184px] max-sm:h-[410px] flex justify-center items-center overflow-clip'>
+    <div className='sm:rounded-xl relative lg:w-[679px] max-lg:max-w-full sm:h-[184px] max-sm:h-[410px] flex justify-center items-center overflow-hidden'>
         <div className='animate-spin-slow absolute bg-gradient-to-r from-[#9972E480]/[50%] to-[#F2A93B85]/[52%] h-[1000px] w-[1000px] origin-center'>
         </div>
-        <div className='absolute bg-[#19173D] h-[calc(100%-6px)] w-[calc(100%-6px)] top-[3px] left-[3px] rounded-[20px] max-sm:gap-[20px] flex max-sm:flex-col sm:justify-between sm:items-center text-[16px] font-normal p-[45px]'>
+        <div className='absolute bg-[#19173D] h-[calc(100%-6px)] w-[calc(100%-6px)] top-[3px] left-[3px] sm:rounded-xl max-sm:gap-[20px] flex max-sm:flex-col sm:justify-between sm:items-center text-[16px] font-normal p-[45px]'>
             <div className='flex flex-col justify-center items-center gap-[10px]'>
                 <h1 className='font-bold text-[36px] leading-[43.57px]'>
                     100M
