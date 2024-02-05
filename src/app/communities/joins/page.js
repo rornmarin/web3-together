@@ -1,19 +1,19 @@
 "use client";
 import React from "react";
 import { SmallEvenCard } from "@/components/SmallEvenCard";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function JoinEvent() {
-  useSearchParams();
-
   const searchParams = useSearchParams();
 
   const imageUrl = searchParams.get("img");
 
   const paragraphs = searchParams.get("paragraphs");
 
+  const router = useRouter();
+
   const handleClickBack = () => {
-    router.push("/community");
+    router.push("/communities");
   };
 
   const eventData = [

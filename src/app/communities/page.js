@@ -9,7 +9,7 @@ const Communities = () => {
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "community/joins",
+      joinLink: "communities/joins",
       query: {
         paragraphs:
           "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the1500s, when an unknown printer took",
@@ -22,7 +22,7 @@ const Communities = () => {
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "community/joins",
+      joinLink: "communities/joins",
       query: {
         paragraphs:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -35,7 +35,7 @@ const Communities = () => {
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "community/joins",
+      joinLink: "communities/joins",
       query: {
         paragraphs:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -48,7 +48,7 @@ const Communities = () => {
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "community/joins",
+      joinLink: "communities/joins",
       query: {
         paragraphs:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida, odio a consequat dapibus, ligula nulla fermentum risus, nec sodales justo justo a quam. Quisque facilisis orci sed fringilla sagittis. Nullam a mauris vitae ex vulputate cursus. In hac habitasse platea dictumst. Morbi vitae fringilla sapien.",
@@ -61,7 +61,7 @@ const Communities = () => {
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "community/joins",
+      joinLink: "communities/joins",
       query: {
         paragraphs:
           "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the1500s, when an unknown printer took",
@@ -75,7 +75,7 @@ const Communities = () => {
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "community/joins",
+      joinLink: "communities/joins",
       query: {
         paragraphs:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -88,7 +88,7 @@ const Communities = () => {
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "community/joins",
+      joinLink: "communities/joins",
       query: {
         paragraphs:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -101,7 +101,7 @@ const Communities = () => {
       description:
         "If you hold 1 Web3 Together Membership Pass = 1 Free NFT in Each NFT Project",
       date: "27 March 2023",
-      joinLink: "community/joins",
+      joinLink: "communities/joins",
       query: {
         paragraphs:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida, odio a consequat dapibus, ligula nulla fermentum risus, nec sodales justo justo a quam. Quisque facilisis orci sed fringilla sagittis. Nullam a mauris vitae ex vulputate cursus. In hac habitasse platea dictumst. Morbi vitae fringilla sapien.",

@@ -34,8 +34,8 @@ export const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link href={'community'}
-            className={clsx({'text-custom-yellow':pathname === '/community'}, 'hover:text-custom-yellow duration-100')}
+          <Link href={'communities'}
+            className={clsx({'text-custom-yellow':pathname === '/communities'}, 'hover:text-custom-yellow duration-100')}
           >
             Community
           </Link>
@@ -76,8 +76,8 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href={'community'}
-              className={clsx({'text-custom-yellow':pathname === '/community'})}
+            <Link href={'communities'}
+              className={clsx({'text-custom-yellow':pathname === '/communities'})}
               onClick={() => setToggleMenu(false)}
             >
               Community
