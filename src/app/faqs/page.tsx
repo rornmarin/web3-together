@@ -1,5 +1,5 @@
-import { Accordion } from '@/components/faqs/Accordion'
 import React from 'react'
+import { Accordion } from '../../components/faqs/Accordion'
 
 const page = () => {
   const faqsData = [{

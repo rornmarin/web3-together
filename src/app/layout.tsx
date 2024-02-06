@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
+import React, { ReactNode } from "react";
+import Navbar from "../components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,16 +17,24 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body suppressHydrationWarning={true}
-        className={`${inter.className} !overflow-x-hidden`}>
+      <body
+        className={`${inter.className} !overflow-x-hidden`}
+        suppressHydrationWarning={true}
+      >
         <div className="w-full md:w-10/12 mx-auto px-5 md:px-0">
           <Navbar />
           {children}
         </div>
       </body>
     </html>
-  )
-}
+  );
+};
+
+export default RootLayout;

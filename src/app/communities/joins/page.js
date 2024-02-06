@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { SmallEvenCard } from "@/components/SmallEvenCard";
 import { useRouter, useSearchParams } from "next/navigation";
+import { SmallEvenCard } from "../../../components/SmallEvenCard";
 
 export default function JoinEvent() {
   const searchParams = useSearchParams();
