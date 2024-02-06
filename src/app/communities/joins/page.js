@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { SmallEvenCard } from "@/components/SmallEvenCard";
 import { useRouter, useSearchParams } from "next/navigation";
+import { api } from "@/utils/api";
 
 export default function JoinEvent() {
   const searchParams = useSearchParams();
@@ -15,6 +16,22 @@ export default function JoinEvent() {
   const handleClickBack = () => {
     router.push("/communities");
   };
+  const [productData, setProductData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await api.get("/products");
+        setProductData(response.data[0]);
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(productData);
 
   const eventData = [
     {
@@ -120,6 +137,19 @@ export default function JoinEvent() {
               </span>
               {paragraphs}
             </h1>
+            <div>
+              {/* testing */}
+              {productData && (
+                <div className="text-xl text-black bg-gray-300 ">
+                  <h1>Title: {productData?.title}</h1>
+                  <h1>Price: {productData?.price}$</h1>
+                  {/* <h1>description: {productData?.description}$</h1>
+                  <h1>category: {productData?.category}$</h1>
+                  <h1>image: {productData?.image}$</h1>
+                  <h1>rating: {productData?.rating}$</h1> */}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
